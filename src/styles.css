@@ -1,24 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: linear-gradient(to right, #f857a6, #ff5858);
+    font-family: Open Sans;
+    font-weight: 300;
+   
+}
+
 .finished{
     text-decoration: line-through;
+}
+
+h1 {
+    margin:0;
+}
+
+h4 {
+    margin:0
 }
 
 .entirety {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: solid black 1px;
+    width: 85%;
+    background: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top:5%;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius:5px
+
+    
 }
 
 .section {
-    width: 100%;
+    width: calc(100% - 35px);
+    height: 50%;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    padding-left: 1%;
+    margin: 0;
+
 }
 
 li {
     display: flex;
-    justify
+    justify-self: flex-start;
+    align-self:flex-start;
+    width: 100%;
+    height:30px;
     
+}
+
+
+.completedButton {
+
+    background-color:transparent;
+    border-radius: 5px;
+    color:#ff69b4;
+    border-color:#ff69b4;
+
+}
+
+.listCompleted {
+    display: flex;
+    height:35px;
+    width: 30%;
+    align-items: center;
+
+}
+
+.listCompletedx {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height:35px;
+}
+
+.x {
+    height:50%;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    
+}
+
+.add {
+    width: 100%;
+    height: 25px;
+    margin-bottom: 15px;
+    margin-top:5px;
+    background-color: #ff1493;
+    border: none;
+    color:#eee;
+    border-radius:5px;
+
+}
+
+.input {
+    width:100%;
+    border:1px solid #eee;
+
+}
+
+.input:focus {
+    border: 1px solid #eee;
+    outline: transparent;
 }

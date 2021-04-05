@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITS_JUST_ANGULAR } from '@angular/core/src/r3_symbols';
 import {TODO} from '../todo';
 
 @Component({
@@ -7,7 +8,7 @@ import {TODO} from '../todo';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  todo : TODO[] = 
+  task : TODO[] = 
   [{
     task: "fold clothes", 
     completed:true,
@@ -29,14 +30,25 @@ export class TodoComponent implements OnInit {
     task: "breathe",
     completed: true,
   }
-
-
 ]
- isCompleted(todo:any) {
+
+searchText: string | null = null;
+newTask: string | null = null;
+
+ isCompleted(task:any) {
    
-   todo.completed = true;
+   task.completed = true;
    
 
+ }
+
+ addTask() {
+this.task.push({task: this.newTask, completed: false});
+  }
+
+ removeTask(todo: TODO) {
+   let i = this.task.findIndex(tasks => tasks === todo)
+   this.task.splice(i, 1);
  }
 
   constructor() { }
